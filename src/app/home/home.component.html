@@ -1,0 +1,13 @@
+<h1>Country Name</h1>
+<ul>
+  <li *ngFor="let item of peopleByCountry" [ngSwitch]="item.country">
+    <p *ngSwitchCase="'US'" class="text-info">{{item.country}}</p>
+    <p *ngSwitchCase="'MARS'" class="text-primary">{{item.country}}</p>
+    <p *ngSwitchCase="'UK'" class="text-danger">{{item.country}}</p>
+    <ul>
+      <li *ngFor="let person of item.people">
+        {{person.name}}
+      </li>
+    </ul>
+  </li>
+</ul>
